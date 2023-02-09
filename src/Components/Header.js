@@ -65,11 +65,23 @@ const Header = () => {
             </div>
         </div>
     </header>
-    <header className="header-bottom py-3">
+    <header className="header-bottom py-1">
         <div className="container-xxl">
             <div className="col-12">
-                <div className="menu-button d-flex align-items-center">
-                    <div></div>
+                <div className="menu-button d-flex align-items-center gap-30 ">
+                    <div>
+                    <div className="dropdown">
+                        <button className="btn btn-secondary bg-transparent border-0 dropdown-toggle d-flex align-items-center gap-15" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/images/menu.svg" alt="menu-image"/>
+                        <span className='d-inline-block me-5'>Shop Categories</span>
+                        </button>
+                        <ul className="dropdown-menu">
+                            <li><Link className="dropdown-item" to="#">Action</Link></li>
+                            <li><Link className="dropdown-item" to="#">Another action</Link></li>
+                            <li><Link className="dropdown-item" to="#">Something else here</Link></li>
+                        </ul>
+                    </div>
+                    </div>
                     <div className="menu-links">
                         <div className="d-flex gap-15 align-items-center">
                             <NavLink to="/">home</NavLink>
