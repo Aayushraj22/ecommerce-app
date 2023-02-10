@@ -32,7 +32,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="col-4">
-                    <div className="header-upper-links d-flex justify-content-between">
+                    <div className="header-upper-links d-flex justify-content-around">
                         <div>
                         <Link className='d-flex text-white align-items-center  gap-10'>
                             <img src='\images\compare.svg' alt='compaer'/>

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {BsLinkedin,BsInstagram,BsYoutube,BsGithub,BsPinterest} from 'react-icons/bs'
 const Footer = () => {
   return (
   <>
@@ -22,14 +23,23 @@ const Footer = () => {
       {/* first column  */}
         <div className="d-flex flex-column gap-10">
           <h2 className="py-1">Contact Us</h2>
-          <ul className="d-flex flex-column m-0 p-0" style={{listStyleType: 'none'}}>
+          {/* <ul className="d-flex flex-column m-0 p-0" style={{listStyleType: 'none'}}>
             <li>Demo Store</li>
             <li>No. 1259 Freedom, New York, 11111</li>
             <li>United States</li>
-          </ul>
-          <p className="py-1">+91 1234567890</p>
-          <p className="py-1">Demo@example.com</p>
-          <div className="d-flex">icons section</div>
+          </ul> */}
+          <address className='m-0'>
+            Demo Store <br/>No. 1259 Freedom,New York, 111111<br/> United States
+          <Link to='tel: +91 1234567890' className="py-1 d-block text-white">+91 1234567890</Link>
+          <Link to='mailto: Demo@example.com' className="py-1 text-white">Demo@example.com</Link>
+          </address>
+          <div className="d-flex gap-15 fs-4 social-icons">
+            <Link to="/linkedIn" className='text-white'><BsLinkedin /></Link>
+            <Link to="/github" className='text-white'><BsGithub /></Link>
+            <Link to="/youtube" className='text-white'><BsYoutube /></Link>
+            <Link to="/instagram" className='text-white'><BsInstagram /></Link>
+            <Link to="/pinterest" className='text-white'><BsPinterest /></Link>
+          </div>
         </div>
       {/* second column */}
         <div className="d-flex flex-column gap-10">

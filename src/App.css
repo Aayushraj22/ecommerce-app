@@ -21,11 +21,13 @@ a{
   --color-232f3e: #232f3e;
   --color-ffffff: #ffffff;
   --color-0000ff: #0000ff;
+  --color-f18c18ee: #e3670f;
+  --color-f5f5f7: #f5f5f7;
 }
 .form-control:focus{
   box-shadow: none;
   border-color: inherit;
-}
+  }
 
 /* header styling start */
 
@@ -47,6 +49,9 @@ a{
   margin: 0px;
   padding:3px 1px;
   font-size: 10px;
+}
+.gap-5{
+  gap: 5px;
 }
 .gap-10{
   gap: 10px;
@@ -109,3 +114,22 @@ p,h1,h2,h3,h4,h5,h6{
 }
 
 /* footer section ends */
+
+/* home page starts */
+.image-text{
+  top: 20%;
+  left: 5%;
+}
+.image-text .property{
+  color: var(--color-f18c18ee);
+}
+.image-text .product{
+  color: var(--color-131921);
+}
+.home-wrapper-2{
+  background-color: var(--color-f5f5f7);
+}
+.services p{
+  font-size: 14px;
+}
+/* home page ends */
