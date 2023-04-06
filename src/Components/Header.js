@@ -1,31 +1,29 @@
 import React from 'react'
 import { NavLink,Link } from 'react-router-dom'
-import {BsSearch} from 'react-icons/bs'
+import {BsSearch,BsFillCartPlusFill,BsFillHeartFill} from 'react-icons/bs'
+import {FaUserCircle} from 'react-icons/fa'
 
 const Header = () => {
   return (
   <>
     <header className="header-top-strip py-3">
-        <div className="container-xxl text-center">
-            <div className="row">
+        <div className="container d-flex flex-wrap text-center">
             {/* 1st column */}
-                <div className="col-6">
-                    <p className='text-white mb-0'>Free Shiping over $100 and Free Returns</p>
-                </div>
+            <div className="col-6">
+                <p className='text-white mb-0'>Free Shiping over $100 and Free Returns</p>
+            </div>
             {/* 2nd column */}
-                <div className="col-6">
-                    <p className='text-white text-end mb-0'>Hotline: <a className='text-white' href='tel:+91 1234567890'>+91 1234567890</a></p>
-                </div>
+            <div className="col-6">
+                <p className='text-white text-end mb-0'>Hotline: <a className='text-white' href='tel:+91 1234567890'>+91 1234567890</a></p>
             </div>
         </div>
     </header>
     <header className="header-upper py-3">
-        <div className="container-xxl text-center">
-            <div className="row align-items-center">
+        <div className="container d-flex flex-wrap justify-content-between text-center align-items-center">
                 <div className="col-3 ">
                     <Link className='text-white fw-bold'>E com</Link>
                 </div>
-                <div className="col-5">
+                <div className="col-4">
                   <div className="input-group">
                       <input type="text" className="form-control" placeholder="search here..." aria-label="search here..." aria-describedby="basic-addon2"/>
                       <span className="input-group-text" id="basic-addon2"><BsSearch/> </span>
@@ -34,39 +32,40 @@ const Header = () => {
                 <div className="col-4">
                     <div className="header-upper-links d-flex justify-content-around">
                         <div>
-                        <Link className='d-flex text-white align-items-center  gap-10'>
-                            <img src='\images\compare.svg' alt='compaer'/>
+                        <Link to='/compareProduct' className='d-flex text-white align-items-center  gap-10'>
+                            <img src='\images\compare.svg' alt='compare'/>
                             <p>compare <br/>product</p>
                         </Link>
                         </div>
                         <div>
-                        <Link className='d-flex text-white align-items-center gap-10'>
-                            <img src='\images\wishlist.svg' alt='wishlist'/>
+                        <Link to='/wishlist' className='d-flex text-white align-items-center gap-10'>
+                            <BsFillHeartFill style={{fontSize:'24px'}}/>
                             <p>Favourite <br/>Whishlist</p>
                         </Link>
                         </div>
                         <div>
-                        <Link className='d-flex text-white align-items-center gap-10'>
-                            <img src='\images\user.svg' alt='user'/>
+                        <Link to='login' className='d-flex text-white align-items-center gap-10'>
+                            <FaUserCircle style={{fontSize:'24px'}}/>
                             <p>Login <br/>Account</p>
                         </Link>
                         </div>
                         <div>
-                        <Link className='d-flex text-white align-items-center gap-10'>
-                            <img src='\images\cart.svg' alt='cart'/>
-                            <div className='d-flex flex-column'>
-                                <span className="badge bg-white text-dark">0</span>
-                                <p>$ 100</p>
+                        <Link to='cart' className='d-flex text-white align-items-center gap-10'>
+                            <div className='position-relative'>
+                                <BsFillCartPlusFill style={{fontSize:'24px'}}/>
+                                {/* selectedItems is a class which will increases if you have some items selected */}
+                                <span className="badge bg-white text-dark position-absolute selectedItems" style={{top:'-40%', right:'-40%',fontSize:'10px'}}>0</span> 
                             </div>
+                            <p>Cart</p>
                         </Link>
                         </div>
                     </div>
                 </div>
-            </div>
+
         </div>
     </header>
     <header className="header-bottom py-1">
-        <div className="container-xxl">
+        <div className="container d-flex">
             <div className="col-12">
                 <div className="menu-button d-flex align-items-center gap-30 ">
                     <div>
@@ -85,9 +84,9 @@ const Header = () => {
                     <div className="menu-links">
                         <div className="d-flex gap-15 align-items-center">
                             <NavLink to="/">home</NavLink>
-                            <NavLink to="/">our store</NavLink>
-                            <NavLink to="/">blogs</NavLink>
-                            <NavLink to="/">contact</NavLink>
+                            <NavLink to="/store">our store</NavLink>
+                            <NavLink to="/Blogs">Blogs</NavLink>
+                            <NavLink to="/contact">contact</NavLink>
                         </div>
                     </div>
                 </div>
