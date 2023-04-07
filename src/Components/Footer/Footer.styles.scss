@@ -1,0 +1,25 @@
+$color-white:hsl(0, 45%, 94%);
+$color-golden: hsla(149, 90%, 51%, 0.824);
+
+.footer{
+  
+    border-bottom: 1px solid var(--color-ffffff);
+    background-color: var(--color-232f3e);
+    color: $color-white;
+    border-bottom: 1px solid whitesmoke;
+  
+  &:nth-child(3){  
+    border-bottom: 0;
+  }
+  & .input-group-text {
+    background-color: $color-golden;
+    color: $color-white;
+  }
+  p,h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+  }
+  .row{
+    --bs-gutter-x: 0;
+  }
+}
+  

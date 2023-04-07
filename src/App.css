@@ -92,28 +92,7 @@ a{
 
 /* header styling ends */
 
-/*  footer section starts */
-.footer{
-  border-bottom: 1px solid var(--color-ffffff);
-  background-color: var(--color-232f3e);
-  color: var(--color-ffffff);
-  border-bottom: 1px solid whitesmoke;
-}
-.footer:nth-child(3){
-  border-bottom: 0;
-}
-.footer .input-group-text {
-  background-color: var(--color-131921);
-  color: var(--color-ffffff);
-}
-p,h1,h2,h3,h4,h5,h6{
-  margin-bottom: 0;
-}
-.row{
-  --bs-gutter-x: 0;
-}
 
-/* footer section ends */
 
 /* home page starts */
 .image-text{
@@ -207,10 +186,13 @@ p,h1,h2,h3,h4,h5,h6{
 
 /* blogcard start here */
 .card-img-top {
+  height:244px;
+  width:80%;
   transition: .5s ease;
 }
 .card-img-top:hover {
-  opacity: 0.3;
+  opacity: 0.85;
+
 }
 .box{
   display: grid;
@@ -224,6 +206,14 @@ p,h1,h2,h3,h4,h5,h6{
 .informationBox{
   display: grid;
   grid-template-columns: 50% 50%;
+}
+.card-title{
+  color:#047BD5;
+
+}
+.card-title:hover{
+  color:#F7A200;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 750px){

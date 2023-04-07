@@ -1,9 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {BsLinkedin,BsInstagram,BsYoutube,BsGithub,BsPinterest} from 'react-icons/bs'
-const Footer = () => {
-  return (
-  <>
+import './Footer.styles.scss'
+
+
+
+
+const Footer = () =>  (
+ 
   <div className="d-flex flex-column w-100">
   {/* first footer */}
     <div className="footer row p-2  justify-content-between">
@@ -18,6 +22,8 @@ const Footer = () => {
         </div>
       </div>
     </div>
+
+
   {/* second footer */}
     <div className="footer row py-3 px-4">
       <div className="col-12 d-flex justify-content-evenly align-items-start">
@@ -42,6 +48,8 @@ const Footer = () => {
             <Link to="/pinterest" className='text-white'><BsPinterest /></Link>
           </div>
         </div>
+
+
       {/* second column */}
         <div className="d-flex flex-column gap-10">
           <h4 className="py-1"><Link to='/information' className='text-white'>Information</Link></h4>
@@ -51,6 +59,8 @@ const Footer = () => {
           <p className='py-1'><Link to='/termsOfService' className='text-white'>Terms of Service</Link></p>
           <p className='py-1'><Link to='/blogs' className='text-white'>Blogs</Link></p>
         </div>
+
+
       {/* third column */}
         <div className="d-flex flex-column gap-10">
           <h4 className="py-1"><Link to='/account' className='text-white'>Account</Link></h4>
@@ -60,6 +70,8 @@ const Footer = () => {
           <p className='py-1'><Link to='/sizeChart' className='text-white'>Size Chart</Link></p>
           <p className='py-1'><Link to='/contact' className='text-white'>contact</Link></p>
         </div>
+
+
       {/* fourth column */}
         <div className="d-flex flex-column gap-10">
           <h4 className="py-1">Quick Links</h4>
@@ -69,6 +81,8 @@ const Footer = () => {
           <p className='py-1'><Link to='/smartWatch' className='text-white'>Smart Watches</Link></p>
           <p className='py-1'><Link to='/tablets' className='text-white'>Tablets</Link></p>
         </div>
+
+
       {/* fifth column */}
       <div className="d-flex flex-column gap-10">
           <h4 className="py-1">Our App</h4>
@@ -80,6 +94,8 @@ const Footer = () => {
         </div>
       </div>
     </div>
+
+
   {/* third footer */}
     <div className="footer row py-3 d-flex">
       <div className="col d-flex align-items-center justify-content-center">
@@ -87,9 +103,9 @@ const Footer = () => {
       </div>
     </div>
   </div>  
-  </>
+  
   )
-}
+
 
 
 

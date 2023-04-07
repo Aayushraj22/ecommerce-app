@@ -2,7 +2,7 @@ import React from 'react'
 import {BsFillStarFill,BsInfoCircle} from 'react-icons/bs'
 // import { Scrollbars } from 'react-custom-scrollbars-2'; scrollbar use krna hai toh isko use kro
 
-const CompareProduct = () => {
+const CompareProduct = (props) => {
   function handleOnClick() {
     document.querySelector('.more-description').style.height = 'min-content'
   }
@@ -16,6 +16,7 @@ const CompareProduct = () => {
 
     alert('added to wishlist')
   }
+  
   return (
   <>
     <div className='detail-card'>
@@ -27,16 +28,16 @@ const CompareProduct = () => {
       </div>
 
       <div className="description-section">
-        <h5 style={{color:'grey', margin: '5px 10px'}}>BLIVE</h5>
+        <h5 style={{color:'grey', margin: '5px 10px'}}>{props.title}</h5>
         <h3>Men Solid Henley Neck Maroon T-Shirt</h3>
         <div style={{display: 'flex',margin:'10px 0'}}>
           <button style={{width:'50px', color:'white', background: 'green', outline: 'none', border: 'none', borderRadius: '5px',fontWeight: 'bolder', display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>4.2<BsFillStarFill/> </button>
-          <span style={{margin:'0 10px'}}>44 Rating &amp; 22Reviews</span>
+          <span style={{margin:'0 10px'}}>44 {props.rating.rate} &amp; {props.rating.count}</span>
         </div>
         <div><b style={{color:'green'}}>Special price</b></div>
         <div style={{display:'flex', width:'fit-content', alignItems: 'center', justifyContent:'space-between',margin:'10px 0'}}>
-            <h5>&#8377;278 </h5>
-            <del style={{color: 'grey',margin:'0 10px'}}>&#8377;1,999</del>
+            <h5>&#8377;{props.price} </h5>
+            <del style={{color: 'grey',margin:'0 10px'}}>&#8377;{props.price*3}</del>
             <span style={{fontWeight:'bolder', color:'green',margin: '0 10px 0 0'}}>86% Off</span>
           <div style={{position:'relative'}}>
             <BsInfoCircle style={{cursor:'pointer'}} className='infoIcons'/>
@@ -45,16 +46,16 @@ const CompareProduct = () => {
                 <hr color='grey' style={{margin:'0'}}/>
                 <div style={{display:'flex',margin:'4px 0', justifyContent: 'space-between', color:'grey'}}>
                   <span>Maximum Retail Price</span>
-                  <del style={{color: 'grey',margin:'0 10px'}}>&#8377;1999</del>
+                  <del style={{color: 'grey',margin:'0 10px'}}>&#8377;{props.price*3}</del>
                 </div>
                 <div style={{display:'flex',margin:'4px 0', justifyContent: 'space-between', color:'grey'}}>
                   <span>Selling Price</span>
-                  <del style={{color: 'grey',margin:'0 10px'}}>&#8377;368</del>
+                  <del style={{color: 'grey',margin:'0 10px'}}>&#8377;{props.price*1.2}</del>
                 </div>
                 <hr color='grey' style={{margin:'0'}}/>
                 <div style={{display:'flex', justifyContent: 'space-between',marginTop:'6px'}}>
                   <h6>Special Price</h6>
-                  <span style={{color: 'grey',margin:'0 10px'}}>&#8377;278</span>
+                  <span style={{color: 'grey',margin:'0 10px'}}>&#8377;{props.price}</span>
                 </div>
               </div>
           </div>
