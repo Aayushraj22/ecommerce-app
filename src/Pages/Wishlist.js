@@ -3,6 +3,7 @@ import BreadCrumb from './BreadCrumb'
 import Meta from './Meta'
 import { useSelector } from 'react-redux'
 import ProductCard from './ProductCard'
+
 const Wishlist = () => {
   const wishlistState = useSelector((state) => state.wishlist);
   // if(wishlistState) {

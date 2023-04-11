@@ -1,0 +1,97 @@
+
+.container-scss{
+    margin:0 40px;
+    display: flex;
+    border: 1px solid;
+    background-color: rgb(199, 202, 205);
+
+    // first column
+    & .columnFirst{
+        display: flex;
+        flex-flow: column wrap;
+        padding: 10px;
+        border: 1px solid rgb(2, 2, 81);
+        width: 70%;
+        
+        & .cfContent{
+            display: flex;
+            background: white;
+            padding: 20px 30px;
+            align-items: center;
+            
+            & .cfcDetail{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+
+                
+            }    
+        }
+
+        & .containerOnChange{
+            display: none;
+
+            @media only screen and (max-width: 600px){
+                & .columnAt600{
+                    flex-direction: column;
+                }                
+            }
+        }
+
+
+
+        @media only screen and (max-width: 600px) {
+            & .cfContent{
+                flex-direction: column;
+            }
+        }
+    }
+
+    // second column
+    & .columnSecond{
+        display: flex;
+        flex-flow: column wrap;
+        padding: 10px;
+        border: 1px solid rgb(2, 2, 81);
+        width: 30%;
+    }
+
+    .btnScss{
+        border: 1px solid grey;
+        padding: 0 30px;
+        cursor: pointer;
+    }
+}
+.smallBox{
+    padding: 5px 10px;
+    background-color: rgb(242, 237, 237);
+    color: blue;
+    font-weight: 700;
+    font-size: 12px;
+    height: fit-content;
+
+}
+
+.addressOnChange{
+    display: none;
+    flex-direction: column;
+}
+.uiAddress{
+    display: flex;
+    align-items: center;
+
+}
+
+@media only screen and (max-width : 650px) {
+    .container-scss{
+        flex-direction: column;
+    & .columnFirst, & .columnSecond{
+        width: 100%;
+    }
+  }
+}
+
+#address1_btn, #address2_btn{
+    display: none;
+    width: 40%;
+}
